@@ -1,0 +1,109 @@
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: #0d1117;
+}
+
+/* Sidebar - Collapsed & Expanded */
+.sidebar {
+  width: 80px !important;
+  flex-shrink: 0;
+  background-color: #000;
+  padding: 20px !important;
+  height: 100vh;
+  transition: width 0.3s ease;
+}
+
+.sidebar.expanded {
+  width: 240px; /* Expanded width */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust main content position based on sidebar */
+.sidebar.expanded + .main-content {
+  margin-left: 200px; /* Shift content when sidebar expands */
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: o.6fr 1.4fr; /* Responsive grid */
+  gap: 0px;
+  width: 90%;
+  padding-left: 90px;
+  flex-grow: 1;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* ExpenseCard & RecentExpenses - Side by Side */
+.expense-card-container {
+  grid-column: 1; /*Left*/
+  justify-items: center;
+}
+
+.recent-expenses {
+  grid-column: 2; /*right*/
+  padding: 20px;
+  
+}
+
+/* Chart & Goals - Side by Side with Unequal Space */
+.chart-goals-container {
+  grid-column: span 2; /* Occupies full width */
+  display: flex;
+  flex-direction: row; /* Arrange side by side */
+  gap: 20px; /* Space between them */
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Goals takes more space than the Chart */
+.goals-container {
+  flex: 0.7; /* Takes more space */
+  padding: 20px !important;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart takes less space */
+.chart-container {
+  flex: 1.3; /* Takes less space */
+  padding-bottom: 0px !important;
+  justify-content: center;
+  height: auto;
+}
+
+.scholarship-budget-container {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.scholarship-container {
+  flex: 1.2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.budget-container {
+  flex: 0.8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@import "tailwindcss";
