@@ -1,0 +1,82 @@
+/* ExpenseCard.css */
+.expense-card {
+  background: linear-gradient(to right, #3300cc, #0099cc) !important; /* Purple to Blue */
+  border-radius: 50px !important;
+  padding: 20px;
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 0px !important;
+}
+
+/* Card Title Styling */
+.card-title {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Flexbox for Income, Expense & Remaining */
+.amount-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: auto;
+  gap: 10px;
+}
+
+/* Income Box */
+.income-box, .expense-box, .remaining-box {
+  padding: 15px;
+  border-radius: 25px;
+  height: auto;
+  width: 30%; /* Adjust width for three boxes */
+  text-align: center !important;
+  font-weight: bold;
+  color: white !important;
+  line-height: 1.5;
+  font-size: larger;
+}
+
+.income-box {
+  background: linear-gradient(to top, #00cc00, #006600); /* Green Gradient */
+}
+
+/* Expense Box */
+.expense-box {
+  background: linear-gradient(to top, #ff6666, #cc0000); /* Red Gradient */
+}
+
+/* Remaining Box */
+.remaining-box {
+  background: linear-gradient(to top, #66b3ff, #0066cc); /* Light Blue to Blue Gradient */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .expense-card {
+      width: 90%; /* Make card wider on smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+  }
+
+  .amount-container {
+      flex-direction: column; /* Stack boxes vertically on smaller screens */
+      align-items: stretch; /* Stretch boxes to full width */
+  }
+
+  .income-box, .expense-box, .remaining-box {
+      width: 100%; /* Full width for stacked boxes */
+      margin-bottom: 10px; /* Add space between stacked boxes */
+  }
+
+  .card-title {
+      right: 10px; /* Adjust title position on smaller screens */
+  }
+}

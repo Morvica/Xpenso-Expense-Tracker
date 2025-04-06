@@ -1,0 +1,106 @@
+/* Sidebar Container */
+.sidebar {
+  width: 40px; /* Compact width */
+  height: 100vh;
+  background-color: #172340!important; /* Black background */
+  color: #ffffff; /* White text */
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s ease-in-out !important;
+  position: fixed;
+}
+
+/* Sidebar Expanded */
+.sidebar.expanded {
+  width: 220px !important;
+}
+
+/* Profile Circle */
+.profile-circle {
+  margin: 20px !important;
+  width: 45px !important;
+  height: 45px !important;
+  background: #14b8a6; /* Teal profile circle */
+  border-radius: 50%;
+}
+
+/* User Name (Hidden in Compact Mode) */
+.username {
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #ffffff; /* White text */
+  margin: 10px;
+}
+
+.sidebar.expanded .username {
+  opacity: 1;
+}
+
+/* Menu Styling */
+.menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 5px;
+}
+
+/* Ensure <Link> elements behave like buttons */
+.menu li .menu-item {
+  text-decoration: none;
+  color: #ffffff; /* White text */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu li .menu-item:hover {
+  background: #1e40af; /* Darker blue hover */
+}
+
+/* Hide text when compact */
+.menu li span {
+  display: none;
+}
+
+.sidebar.expanded .menu li span {
+  display: inline;
+}
+
+/* Signout Button */
+.signout-btn {
+  color: #ffffff; /* White text */
+  width: 100%;
+  padding: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.signout-btn:hover {
+  background-color: #e11d48; 
+}
+
+.signout-btn span {
+  display: none;
+}
+
+.sidebar.expanded .signout-btn span {
+  display: inline;
+}

@@ -1,0 +1,71 @@
+/* RecentExpenses.css */
+.recent-expense {
+  background-color: #1e293b; /* Subtle light gray-blue background */
+  border: 1px solid #152e4d; /* Border for distinction */
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4), /* Teal glow */
+  0 8px 24px rgba(20, 184, 166, 0.3), /* Lighter teal glow */
+  0 16px 40px rgba(20, 184, 166, 0.2); /* Soft teal glow */
+  filter: drop-shadow(0 4px 8px rgba(20, 184, 166, 0.5)); /* Additional glow */
+  padding: 20px;
+  border-radius: 10px !important;
+  color: #ffffff; /* White text */
+  text-align: left;
+  width: 90%;
+  margin: 5px;
+}
+
+h2 {
+  margin: 0px;
+  color: #14b8a6; /* Teal header */
+  font-weight: bold;
+}
+
+/* Styling for the table */
+table {
+  padding-inline: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid #14b8a6; /* Teal border */
+}
+
+/* Table header */
+thead {
+  background: #1e293b; /* Dark gray header background */
+  border: 1px solid #14b8a6; /* Teal border */
+}
+
+th {
+  padding: 10px;
+  font-size: 16px;
+  color: #22c55e; /* Green headers */
+  border: 1px solid #14b8a6; /* Teal border */
+}
+
+/* Table rows */
+td {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #374151; /* Darker border color */
+  color: #ffffff; /* White text */
+  border: 1px solid #14b8a6; /* Teal border */
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background: #1e293b; /* Dark gray alternating row background */
+}
+
+tbody tr:hover {
+  background: #2d3748; /* Slightly lighter dark gray on hover */
+  transition: 0.3s;
+}
+
+/* Example of Red for negative values, Green for positive values */
+td.expense-negative {
+  color: #e11d48; /* Red */
+}
+
+td.expense-positive {
+  color: #22c55e; /* Green */
+}

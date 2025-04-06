@@ -1,0 +1,126 @@
+/* Goals Section */
+.goals-containers {
+  background-color: #1e293b; /* Subtle light gray-blue background */
+  border: 1px solid #152e4d; /* Border for distinction */
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4), /* Teal glow */
+  0 8px 24px rgba(20, 184, 166, 0.3), /* Lighter teal glow */
+  0 16px 40px rgba(20, 184, 166, 0.2); /* Soft teal glow */
+  filter: drop-shadow(0 4px 8px rgba(20, 184, 166, 0.5)); /* Additional glow */
+  padding: 20px !important;
+  border-radius: 10px;
+  color: #ffffff;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Goals Title */
+.goals-title {
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: #14b8a6; /* Teal header */
+  margin-bottom: 20px;
+}
+
+/* Add Goal Button */
+.add-goal-btn {
+  background: #14b8a6;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 20px;
+  position: right;
+}
+
+.add-goal-btn:hover {
+  background: #0d9488;
+}
+
+/* Goals Grid */
+.goals-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: left;
+}
+
+/* Individual Goal Card */
+.goal-card {
+  display: flex;
+  align-items: center;
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 15px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Goal Image */
+.goal-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #14b8a6;
+}
+
+/* Goal Details (Right Side) */
+.goal-details {
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Goal Header (Name & Total Amount) */
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Goal Name */
+.goal-name {
+  font-size: 18px;
+  color: white;
+  margin: 0;
+}
+
+/* Total Amount - Top Right */
+.goal-amount {
+  font-size: 14px;
+  color: #ffb400;
+  font-weight: bold;
+}
+
+.goal-saved {
+  font-size: 14px;
+  color: #22c55e;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #1e40af;
+  height: 10px;
+  width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress {
+  background: linear-gradient(to right, #22c55e, #028b3b);
+  height: 100% !important;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}

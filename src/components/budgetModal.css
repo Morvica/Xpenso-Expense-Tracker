@@ -1,0 +1,105 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Container */
+.modal-container {
+    position: relative;
+    background: #12192c;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.6);
+    width: 95%;
+    max-width: 600px;
+    height: 70vh;
+    max-height: 80vh;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-container:hover {
+    box-shadow: 0 0 15px #14b8a6; /* More glow */
+}
+
+/* Modal Title */
+.modal-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #14b8a6;
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #b0b3b8;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.close-button:hover {
+    color: #14b8a6;
+}
+
+/* Modal Labels */
+.modal-label {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #b0b3b8;
+    margin-bottom: 8px;
+}
+
+/* Modal Inputs */
+.modal-input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #14b8a6;
+    border-radius: 8px;
+    background: #0f172a;
+    color: white;
+    font-size: 18px;
+    transition: border 0.3s ease-in-out;
+}
+
+.modal-input:focus {
+    outline: none;
+    border: 2px solid #14b8a6;
+}
+
+/* Modal Button */
+.modal-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #14b8a6;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-button:hover {
+    background-color: #008080;
+    box-shadow: 0 0 15px #14b8a6; /* More glow */
+}

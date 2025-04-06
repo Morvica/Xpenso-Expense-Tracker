@@ -1,0 +1,126 @@
+/* Floating Container */
+.floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+
+/* Floating Buttons Container */
+.floating-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  left: 50px !important;
+}
+
+/* Individual Floating Button */
+.floating-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #4A90E2, #1E3C72) !important;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  position: absolute;
+  right: 25px !important;
+  bottom: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Show Floating Buttons */
+.floating-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Adjusting Positions for Each Button */
+.floating-btn:nth-child(1) {
+  transform: translateY(0);
+}
+.floating-btn.show:nth-child(1) {
+  transform: translateY(-70px);
+}
+
+.floating-btn:nth-child(2) {
+  transform: translateY(0);
+}
+.floating-btn.show:nth-child(2) {
+  transform: translateY(-140px);
+}
+
+.floating-btn:nth-child(3) {
+  transform: translateY(0);
+}
+.floating-btn.show:nth-child(3) {
+  transform: translateY(-210px);
+}
+
+/* Main Floating Button */
+.main-floating-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #00A8E8, #0077B6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.main-floating-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #0096C7, #005A8D);
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: -110px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.floating-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(-5px);
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+}
