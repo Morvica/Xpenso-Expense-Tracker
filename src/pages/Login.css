@@ -1,0 +1,93 @@
+body {
+    background-color: #0d1117;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0a0f1f; /* Dark navy background */
+  }
+  
+  .login-box {
+    background-color: #12192c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.6);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #14b8a6;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #14b8a6;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #14b8a6;
+    border-radius: 5px;
+    background-color: #0f172a;
+    color: #ffffff;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #14b8a6;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.6); /* Glowing effect */
+  }
+  
+  .login-button:hover {
+    background-color: #008080;
+    box-shadow: 0 0 15px #14b8a6; /* More glow */
+  }
+  
+  .error-message {
+    color: #ff5555;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .signup-link span {
+    color: #14b8a6;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .signup-link span:hover {
+    text-decoration: underline;
+  }
+  

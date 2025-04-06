@@ -1,0 +1,138 @@
+/* .split-expense-page {
+  background-color: #121212; 
+  min-height: 100vh;
+  align-items: center;
+} */
+
+.body {
+  background-color: #0f172a;
+}
+
+.sidebar {
+  width: 80px !important;
+  flex-shrink: 0;
+  background-color: #121a2d;
+  padding: 20px !important;
+  height: 100vh;
+  transition: width 0.3s ease !important;
+}
+
+.sidebar.expanded {
+  width: 240px; /* Expanded width */
+}
+
+/* Main Content (Budget Grid Container) */
+.split-grid-container {
+  flex: 1;
+  padding: 60px !important;
+  padding-left: 100px!important;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust main content position based on sidebar (Same as Dashboard) */
+.sidebar.expanded + .split-grid-container {
+  margin-left: 200px; /* Shift content when sidebar expands */
+}
+
+.split-expenses-container {
+  justify-content:  center !important;
+  align-items: center !important;
+  display: flex;
+  margin-top: 150px;
+}
+
+.split-expense-container {
+  background-color: #1e293b; /* Subtle light gray-blue background */
+  border: 1px solid #152e4d; /* Border for distinction */
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4), /* Teal glow */
+  0 8px 24px rgba(20, 184, 166, 0.3), /* Lighter teal glow */
+  0 16px 40px rgba(20, 184, 166, 0.2); /* Soft teal glow */
+  filter: drop-shadow(0 4px 8px rgb(3, 243, 215)) !important; /* Additional glow */
+  border-radius: 10px;
+  padding: 30px;
+  width: 400px; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  color: #E0E0E0; /* Light text color */
+}
+
+h2 {
+  color: #00BCD4; /* Teal heading from the image */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.person-input {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.person-input input[type="text"],
+.person-input input[type="number"] {
+  flex-grow: 1;
+  padding: 10px;
+background-color: #1e293b; /* Subtle light gray-blue background */
+border: 2px solid #14b8a6;
+  border-radius: 5px;
+  color: #E0E0E0; /* Light text for inputs */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.person-input input[type="text"]:focus,
+.person-input input[type="number"]:focus {
+  outline: none;
+  background-color: #1e293b; /* Subtle light gray-blue background */
+  border: 2px solid #14b8a6;
+}
+
+.add-btn, .calculate-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #14b8a6; /* Teal button */
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.add-btn:hover, .calculate-btn:hover {
+  background-color: #008080; /* Darker teal on hover */
+  box-shadow: 0 0 15px #14b8a6; /* More glow */
+}
+
+.result {
+  margin-top: 20px;
+  background-color: #262626; /* Darker result background */
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.result h3 {
+  color: #00BCD4; /* Teal result heading */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.result ul {
+  list-style: none;
+  padding: 0;
+}
+
+.result li {
+  padding: 8px;
+  border-bottom: 1px solid #424242; /* Darker border for list items */
+}
+
+.result li:last-child {
+  border-bottom: none;
+}

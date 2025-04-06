@@ -1,0 +1,117 @@
+/* Signup Page Styles */
+body {
+    background-color: #0d1117;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  .signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0a0f1f; /* Dark navy background */
+  }
+  
+  .signup-box {
+    background-color: #12192c; /* Darker blue box background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.6); /* Glowing teal effect */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .signup-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #14b8a6; /* Bright teal */
+    margin-bottom: 15px;
+  }
+  
+  .error-message {
+    color: #ff4c4c; /* Bright red */
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .success-message {
+    color: #ffffff; /* Teal */
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color: #14b8a6; /* Teal */
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #14b8a6; /* Teal border */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #0f172a; /* Dark input background */
+    color: #ffffff; /* White text */
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #14b8a6; /* Teal */
+    box-shadow: 0 0 10px #14b8a6; /* Glowing effect */
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #14b8a6; /* Teal */
+    color: #000000; /* Black text */
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.6); /* Glowing effect */
+  }
+  
+  .signup-button:hover {
+    background-color: #008080; /* Dark teal */
+    box-shadow: 0 0 15px #14b8a6; /* More glow */
+  }
+  
+  .signup-button.disabled {
+    background-color: #1e293b; /* Dark gray */
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    /* color: #14b8a6; Teal */
+  }
+  
+  .login-text {
+    color: #14b8a6; /* Teal */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-text:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,132 @@
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #0f172a;
+}
+
+/* Sidebar - Collapsed & Expanded */
+.sidebar {
+  width: 80px !important ;
+  flex-shrink: 0;
+  background-color:#162b5d;
+  padding: 20px !important;
+  height: 100vh;
+  transition: width 0.3s ease !important;
+}
+
+.sidebar.expanded {
+  width: 240px; /* Expanded width */
+}
+
+/* Main Content */
+.dashboard-grid {
+  flex: 1;
+  padding: 60px;
+  padding-top: 30px !important;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  transition: margin-left 0.3s ease;
+  gap: 0px !important;
+}
+
+/* Adjust main content position based on sidebar */
+.sidebar.expanded + .dashboard-grid {
+  margin-left: 200px; /* Shift content when sidebar expands */
+}
+
+.dashboard-header {
+  text-align: left;
+  margin-left: 30px;
+}
+
+.dashboard-title {
+  color: #14b8a6;
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dashboard-time {
+  font-size: 20px;
+  color: #b0b3b8;
+  margin-top: 0px;
+}
+
+.card-recent-expense-container {
+  display: flex;
+  grid-column: span 2;
+  flex-direction: row ;
+  gap:30px !important;
+  justify-content: space-between;
+}
+
+/* ExpenseCard & RecentExpenses - Side by Side */
+.expense-card-container {
+  flex: 0.8 !important;
+  padding-left: 35px !important;
+}
+
+.recent-expenses {
+  flex: 1.2 !important;
+  padding: 20px;
+}
+
+/* Chart & Goals - Side by Side */
+.chart-goals-container {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 40px !important;
+  margin-right: 70px !important;
+}
+
+/* Goals takes more space */
+/* .goals-container {
+  flex: 0.5;
+  padding: 0px !important;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Chart takes less space */
+.chart-container {
+  flex: 1.5;
+  justify-content: center;
+}
+
+/* Scholarship & Category Budget */
+.scholarship-budget-container {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* .scholarship-container {
+  flex: 1.2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.goals-container {
+  flex: 0.5;
+  padding: 0px !important;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.budget-container {
+  flex: 0.8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
